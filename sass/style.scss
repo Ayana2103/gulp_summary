@@ -1,5 +1,11 @@
 @use './common' as com;
 
+$white_color: #fff;
+$sub_white_color: #e3f2fd;
+$gray_color: #777;
+$blue_color:#6ba7ed;
+
+$main_padding_px: 50px;
 
 .inner{
   @include com.mq(pc){
@@ -15,7 +21,7 @@
 
 
 .skills-header{
-  background-color: #fff;
+  background-color: $white_color;
   position: fixed;
   z-index: 1;
   width: 100%;
@@ -27,16 +33,16 @@
   justify-content:space-between;
 }
 .main-nav a:link, a:visited {
-  color: #ffffff;
+  color: $white_color;
   text-decoration: none;
 }
 .fa-3x{
-  color: #777;
+  color: $gray_color;
   margin: 15px 0px;
 }
 .contact-btn{
-  color: #ffffff;
-  background-color: #6ba7ed;
+  color: $white_color;
+  background-color: $blue_color;
   font-size: 12px;
   padding: 12px 14px;
 
@@ -68,7 +74,7 @@
     left: 15px;
     width: 30px;
     height: 4px;
-    background-color: #777;
+    background-color: $gray_color;
     border-radius: 8px;
 
       &:nth-of-type(1){
@@ -105,7 +111,7 @@
 .main-title{
   font-size: 65px;
   font-weight: 700;
-  color: #6ba7eb;
+  color: $blue_color;
   margin: 0 0 30px 0;
 
   @include com.mq(sp){
@@ -115,7 +121,7 @@
 .sub-title{
   font-size: 40px;
   font-weight: 700;
-  color: #ffffff;
+  color: $white_color;
 
   @include com.mq(sp){
     font-size: 30px;
@@ -124,11 +130,11 @@
 
 
 .work{
-  background-color: #e3f2fd;
-  padding-top: 50pX;
+  background-color: $sub_white_color;
+  padding-top: $main_padding_px;
 
   @include com.mq(pc){
-    padding-bottom: 50px;
+    padding-bottom: $main_padding_px;
   }
 }
 .work-inner{
@@ -176,11 +182,11 @@
 
 
 .skills{
-  background-color: #fff;
-  padding: 50px 0 70px 0;
+  background-color: $white_color;
+  padding: $main_padding_px 0 70px 0;
 }
 .skills-inner{
-  background-color: #fff;
+  background-color: $white_color;
 }
 .skills-title{
   @include com.contentTitle;
@@ -237,7 +243,7 @@
 
 .plan{
   background-color: #d0dfee;
-  padding: 50px 0;
+  padding: $main_padding_px 0;
 }
 .plan-title{
   @include com.contentTitle;
@@ -257,10 +263,10 @@
 }
 table th, table td{
   padding: 10px;
-  border-left: 2px solid #fff;
+  border-left: 2px solid $white_color;
 }
 table th{
-  background-color: #6ba7ed;
+  background-color: $blue_color;
 
   @include com.mq(sp){
     font-size: 14px;
@@ -281,11 +287,11 @@ table tr:nth-child(odd){
 
 
 .sns{
-  background-color: #e3f2fd;
+  background-color: $sub_white_color;
   padding: 200px 0;
 
   @include com.mq(sp){
-    padding: 50px 15px;
+    padding: $main_padding_px 15px;
   }
 }
 .sns-nav{
@@ -307,13 +313,13 @@ table tr:nth-child(odd){
     transition: 0.5s;
 
     &:hover{
-    background-color: #fff;
+    background-color: $white_color;
     transition: 0.5s;
     }
 
     @include com.mq(sp){
       width: 100%;
-      padding: 50px 0;
+      padding: $main_padding_px 0;
     }
   }
 }
